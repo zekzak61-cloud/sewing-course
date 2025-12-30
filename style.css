@@ -1,34 +1,73 @@
-/* الخلفية الأساسية للموقع */
+/* تنسيق الصفحة العام */
 body {
-    background-color: #f9fbf7; /* لون أبيض مائل للتفاحي هادئ جداً */
-    color: #4a4a4a;
+    background-color: #f9fbf7;
+    direction: rtl; /* لضمان ترتيب المحتوى من اليمين لليسار */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* الجزء العلوي (الهيدر) - تفاحي */
+/* الهيدر - اللون التفاحي */
 header {
-    background-color: #A7D489 !important; /* لون تفاحي */
+    background-color: #A7D489 !important;
     padding: 40px 20px;
-    color: #4a345a; /* نص موف غامق */
+    text-align: center;
+    color: #4a345a;
 }
 
-/* الأزرار (عرض الدرس) - موف */
+/* حاوية الدروس (هذا الجزء هو الذي سيجعلها مربعات بجانب بعضها) */
+.lessons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+}
+
+/* كرت الدرس (المربع الواحد) */
+.lesson-card {
+    background: white;
+    width: 280px; /* عرض المربع */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px); /* حركة بسيطة عند مرور الماوس */
+}
+
+/* عناوين الدروس داخل المربع - موف */
+.lesson-card h3 {
+    color: #7D5A94;
+    margin-bottom: 15px;
+}
+
+/* الأزرار - موف */
 .btn, .lesson-card button {
-    background-color: #7D5A94 !important; /* لون موف */
+    background-color: #7D5A94 !important;
     color: white !important;
     border: none;
     border-radius: 8px;
-    padding: 10px 20px;
+    padding: 12px 25px;
     cursor: pointer;
+    font-size: 16px;
     transition: 0.3s;
+    width: 100%; /* ليأخذ الزر عرض المربع */
 }
 
-/* عند مرور الماوس على الزر */
 .btn:hover, .lesson-card button:hover {
-    background-color: #5e4370 !important; /* موف أغمق قليلاً */
+    background-color: #5e4370 !important;
 }
 
-/* عناوين الدروس */
-.lesson-card h3 {
-    color: #7D5A94; /* عناوين موف */
+/* تنسيق شريط البحث */
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
 }
+
