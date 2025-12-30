@@ -1,80 +1,65 @@
-/* 1. تنسيق الصفحة العام لإعطاء مظهر نظيف */
+/* تنسيق عام للموقع */
 body {
-    background-color: #f4f7f1; /* خلفية فاتحة مريحة للعين */
-    direction: rtl; /* ترتيب المحتوى من اليمين لليسار */
-    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f9fbf7;
+    direction: rtl; /* لضمان الترتيب العربي */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center; /* لتوسيط النصوص */
 }
 
-/* 2. الهيدر (الجزء العلوي) - اللون التفاحي */
+/* الهيدر العلوي - تفاحي */
 header {
     background-color: #A7D489 !important;
-    padding: 50px 20px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 40px 20px;
+    margin-bottom: 30px;
 }
 
 header h1 {
-    color: #4a345a; /* نص موف غامق */
-    margin: 0;
+    color: #4a345a; /* موف غامق للنص */
 }
 
-/* 3. حاوية الدروس - هذا الجزء الذي سيجعلها مربعات بجانب بعضها وفي المنتصف */
+/* حاوية الدروس - تجعلها مربعات مرتبة */
 .lessons-container {
-    display: flex; /* تفعيل خاصية الاصطفاف */
-    flex-wrap: wrap; /* السماح بنزول الكروت لسطر جديد */
-    justify-content: center; /* وضع الكروت في منتصف الصفحة */
-    gap: 25px; /* المسافة بين كل درس وآخر */
-    padding: 40px 10px;
-    max-width: 1200px; /* ضمان عدم تمدد المحتوى بشكل مبالغ فيه */
-    margin: 0 auto; /* توسيط الحاوية نفسها */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* لتوسيط المربعات في الصفحة */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* 4. كرت الدرس (المربع) */
+/* تنسيق كرت الدرس (المربع الواحد) */
 .lesson-card {
     background: white;
-    width: 300px; /* تحديد عرض المربع */
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    text-align: center;
-    border: 1px solid #e0eadd;
+    width: 280px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* 5. عناوين الدروس - اللون الموف */
-.lesson-card h3 {
-    color: #7D5A94;
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-/* 6. الأزرار - اللون الموف */
+/* الأزرار - موف */
 .btn, .lesson-card button {
     background-color: #7D5A94 !important;
     color: white !important;
     border: none;
-    border-radius: 12px;
-    padding: 12px 20px;
+    border-radius: 8px;
+    padding: 10px 20px;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    width: 100%; /* الزر يأخذ عرض الكرت */
-    transition: 0.3s ease;
+    width: 100%;
+    margin-top: auto;
 }
 
-.btn:hover {
-    background-color: #5e4370 !important;
-    transform: scale(1.02);
-}
-
-/* 7. شريط البحث */
+/* شريط البحث */
 #searchBar {
-    width: 80%;
-    max-width: 500px;
-    padding: 12px 25px;
-    border-radius: 25px;
-    border: 2px solid #A7D489;
-    margin-top: 25px;
-    outline: none;
+    padding: 10px;
+    width: 60%;
+    max-width: 400px;
+    border-radius: 20px;
+    border: 1px solid #A7D489;
+    margin-bottom: 20px;
 }
