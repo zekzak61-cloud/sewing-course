@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقنيات متقدمة - خياطة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><h2>خياطة إبداعية</h2></div>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="#">عن المادة</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>مادة تقنيات متقدمة</h1>
+        <p>استكشفي أسرار الخياطة الاحترافية والتشطيبات الراقية</p>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="ابحثي عن درس (سحاب، كشكشة...)" onkeyup="filterLessons()">
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="lessons-grid" id="lessonsGrid">
+            </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script>
+        function displayLessons(data) {
+            const grid = document.getElementById('lessonsGrid');
+            grid.innerHTML = data.map(lesson => `
+                <div class="card">
+                    <h3>${lesson.title}</h3>
+                    <p>${lesson.objectives[0]}...</p>
+                    <a href="lesson.html?id=${lesson.id}" class="btn">عرض الدرس</a>
+                </div>
+            `).join('');
+        }
+
+        function filterLessons() {
+            const term = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = lessonsData.filter(l => 
+                l.title.toLowerCase().includes(term) || 
+                l.keywords.some(k => k.includes(term))
+            );
+            displayLessons(filtered);
+        }
+
+        // تشغيل العرض عند التحميل
+        displayLessons(lessonsData);
+    </script>
+</body>
+</html>
