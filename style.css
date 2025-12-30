@@ -1,21 +1,21 @@
 /* تنسيق الصفحة العام */
 body {
     background-color: #f9fbf7;
-    direction: rtl; /* لضمان ترتيب المحتوى من اليمين لليسار */
+    direction: rtl; /* لضمان الترتيب العربي من اليمين لليسار */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* الهيدر - اللون التفاحي */
+/* الهيدر (الجزء العلوي) - تفاحي */
 header {
-    background-color: #A7D489 !important;
+    background-color: #A7D489 !important; /* اللون التفاحي */
     padding: 40px 20px;
     text-align: center;
-    color: #4a345a;
+    color: #4a345a; /* نص موف غامق */
 }
 
-/* حاوية الدروس (هذا الجزء هو الذي سيجعلها مربعات بجانب بعضها) */
+/* حاوية الدروس (المسؤولة عن شكل المربعات) */
 .lessons-container {
     display: flex;
     flex-wrap: wrap;
@@ -24,10 +24,10 @@ header {
     padding: 40px 20px;
 }
 
-/* كرت الدرس (المربع الواحد) */
+/* كرت الدرس (المربع) */
 .lesson-card {
     background: white;
-    width: 280px; /* عرض المربع */
+    width: 280px;
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
@@ -36,10 +36,10 @@ header {
 }
 
 .lesson-card:hover {
-    transform: translateY(-5px); /* حركة بسيطة عند مرور الماوس */
+    transform: translateY(-5px);
 }
 
-/* عناوين الدروس داخل المربع - موف */
+/* عناوين الدروس - موف */
 .lesson-card h3 {
     color: #7D5A94;
     margin-bottom: 15px;
@@ -47,15 +47,14 @@ header {
 
 /* الأزرار - موف */
 .btn, .lesson-card button {
-    background-color: #7D5A94 !important;
+    background-color: #7D5A94 !important; /* اللون الموف */
     color: white !important;
     border: none;
     border-radius: 8px;
     padding: 12px 25px;
     cursor: pointer;
     font-size: 16px;
-    transition: 0.3s;
-    width: 100%; /* ليأخذ الزر عرض المربع */
+    width: 100%;
 }
 
 .btn:hover, .lesson-card button:hover {
@@ -65,9 +64,9 @@ header {
 /* تنسيق شريط البحث */
 input[type="text"] {
     padding: 10px;
-    width: 60%;
+    width: 80%;
+    max-width: 400px;
     border-radius: 20px;
     border: 1px solid #ddd;
     margin-top: 20px;
 }
-
